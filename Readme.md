@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Рубель](https://up.htmlacademy.ru/adaptive/21/user/663617).
-* Наставник: `Неизвестно`.
+* Наставник: `Марина Удовенко`.
 
 ---
 
