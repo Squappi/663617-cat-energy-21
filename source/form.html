@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body class="page__body">
+    <header class="page-header">
+        <a class="page-header__logo">
+            <img src="https://via.placeholder.com/150x150">
+        </a>
+        <nav class="main-navigation">
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-navigation__wrapper">
+                <ul class="main-navigation-list site-list">
+                    <li class="site-list__item site-list__item--active">
+                        <a>Главная</a>
+                    </li>
+                    <li class="site-list__item"><a href="">Каталог продукции</a></li>
+                    <li class="site-list__item"><a href="">Подбор программы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="page-main">
+        <h1 class="page-main__header">Подбор программы</h1>
+        <section class="form">
+            <form class="form__wrapper" method="get" action="https://echo.htmlacademy.ru/">
+                <div class="form__container form__container--input">
+                    <h3 class="form__header-medium">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+                        <ul class="form__list form__list--input">
+                            <li class="form__item form__item--full-name">
+                                <label for="form-name">Имя:*</label>
+                                <input class="form__input form__input--text" id="form-name" type="text" placeholder="7">
+                            </li>
+                            <li class="form__item form__item--full-name">
+                                <label for="weight">Вес(кг):*</label>
+                                <input class="form__input form__input--text" id="weight" type="text" placeholder="7">
+                            </li>
+                            <li class="form__item form__item--full-name">
+                                <label for="age">Возраст(лет):</label>
+                                <input class="form__input form__input--text" id="age" type="text" placeholder="7">
+                            </li>
+                        </ul>
+                </div>
+                <div class="form__container form__container--radio">
+                    <ul class="form__list form__list--radio">
+                        <li class="form__item form__item--radio">
+                            <label for="slimming">Похудение</label>
+                            <input class="form__input form__input--radio" id="slimming" type="radio" name="radio-form" value="Похудение" checked>
+                        </li>
+                        <li class="form__item form__item--radio">
+                            <label for="weight-gain">Набор массы</label>
+                            <input class="form__input form__input--radio" id="weight-gain" type="radio" name="radio-form" value="Набор массы">
+                        </li>
+                        <li class="form__item form__item--radio">
+                            <label for="uncertainty">Не знаю (Нужен ваш совет)</label>
+                            <input class="form__input form__input--radio" id="uncertainty" type="radio" name="radio-form" value="Не знаю">
+                        </li>
+                    </ul>
+                </div>
+                <div class="form__container form__container--contacts">
+                    <h2 class="form__header form__header--bold">Контактные данные (владельца кота)</h2>
+                    <ul class="form__list form__list--contacts">
+                        <li class="form__item form__item--contact">
+                            <label for="form-email">E-mail:*</label>
+                            <input class="form__input form__input--email" id="form-email" type="text" placeholder="kuklachev@gmail.com">
+                        </li>
+                        <li class="form__item form__item--contact">
+                            <label for="weight">Вес(кг):*</label>
+                            <input class="form__input form__input--mobile" id="weight" type="tel" placeholder="8 (960) 900-60-90">
+                        </li>
+                    </ul>
+                </div>
+                <div class="form__container form__container--comment">
+                    <h2 class="form__header form__header--bold">Комментарий</h2>
+                    <textarea class="form__textarea" name="comment" id="comment-field" rows="5" placeholder="Расскажите обо всех повадках кота" required></textarea>
+                </div>
+                <div class="form__container form__container--checkbox">
+                    <h2 class="form__header form__header--bold">Дополнительно</h2>
+                    <ul class="form__list form__list--checkbox">
+                        <li class="form__item form__item--checkbox">
+                            <input class="form__input form__input--checkbox" type="checkbox" id="sweetener" name="sweetener" value="Сахарозаменитель" checked>
+                            <label for="sweetener">сахарозаменитель</label>
+                        </li>
+                        <li class="form__item form__item--checkbox">
+                            <input class="form__input form__input--checkbox" type="checkbox" id="drinking-water" name="drinking-water" value="Питьевая вода">
+                            <label for="drinking-water">питьевая вода</label>
+                        </li>
+                        <li class="form__item form__item--checkbox">
+                            <input class="form__input form__input--checkbox" type="checkbox" id="milk" name="milk" value="Молоко">
+                            <label for="milk">молоко</label>
+                        </li>
+                        <li class="form__item form__item--checkbox">
+                            <input class="form__input form__input--checkbox" type="checkbox" id="vitamins" name="vitamins" value="Витамины">
+                            <label for="vitamins">витамины</label>
+                        </li>
+                    </ul>
+                </div>
+                <button class="form__button form__button--submit" type="submit">Отправить заявку</button>
+                <p class="form__text">* — Обязательные поля</p>
+            </form>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__contacts contacts">
+                <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+                <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <div class="page-footer__map">
+                <!-- место для карты -->
+            </div>
+        </div>
+        <div class="page-footer__logo">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x150">
+            </div>
+            <div class="page-footer__social social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer__copyright copyright">
+                <b class="copyright__text">HTML Academy</b>
+                <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </div>
+        </div>
+    </footer>
+    </main>
+</body>
+
+</html>
