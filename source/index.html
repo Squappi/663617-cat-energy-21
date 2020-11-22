@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -19,7 +22,7 @@
                         <a>Главная</a>
                     </li>
                     <li class="site-list__item"><a href="">Каталог продукции</a></li>
-                    <li class="site-list__item"><a href="../source/form.html">Подбор программы</a></li>
+                    <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,13 +30,13 @@
     <main class="page-main">
         <section class="banner">
             <h1 class="visually-hidden">Cat Energy - питание для котов</h1>
-            <div class="banner-wrapper">
-                <header class="banner-header">
+            <div class="banner__wrapper">
+                <header class="banner__header">
                     <h2 class="banner__title">Функциональное питание для котов</h2>
                     <p class="banner__slogan">Занялся собой? Займись котом!</p>
                     <img class="src=https://via.placeholder.com/150x150" alt="Продукция">
                 </header>
-                <a class="banner__button" href="../source/form.html">Подобрать программу</a>
+                <a class="banner__button" href="form.html">Подобрать программу</a>
             </div>
         </section>
         <section class="features">
@@ -43,7 +46,7 @@
                     <h2 class="features__title">Похудение</h2>
                     <p class="features__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
                 </div>
-                <button class="button " type="button">Каталог slim</button>
+                <a class="button" href="catalog.html">Каталог slim</a>
             </div>
         </section>
         <section class="features">
@@ -53,7 +56,7 @@
                     <h2 class="features__title">Набор массы</h2>
                     <p class="features__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
                 </div>
-                <button class="button " type="button">Каталог pro</button>
+                <a class="button" href="catalog.html">Каталог pro</a>
             </div>
         </section>
         <section class="adventures">
@@ -93,7 +96,7 @@
         <footer class="page-footer">
             <div class="page-footer__wrapper">
                 <div class="page-footer__contacts contacts">
-                    <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+                    <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
                     <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
                 </div>
                 <div class="page-footer__map">
@@ -119,7 +122,7 @@
                 </div>
                 <div class="page-footer__copyright copyright">
                     <b class="copyright__text">HTML Academy</b>
-                    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
                 </div>
             </div>
         </footer>
