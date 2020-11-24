@@ -3,6 +3,7 @@
   font-size: @font-size;
   font-weight: 400;
   text-transform: uppercase;
+  color: @basic_black;
 }
 .form__header {
   font-size: @font-size + 10px;
@@ -15,9 +16,10 @@
 .form__header--contacts {
   margin-top: 26px;
   margin-bottom: 32px;
-  .form__contact {
-    color: @special_dark-grey;
-  }
+}
+
+.form__contact {
+  color: @special_dark-grey;
 }
 
 .form__list {
@@ -81,15 +83,22 @@
   margin-top: 27px;
   margin-bottom: 34px;
 }
+.form__textarea,
+.form__input--text {
+  border: 1px solid @border_grey-2;
+}
 
 .form__item--checkbox {
   margin-bottom: 13px;
+  color: @basic_black;
 }
 .form__item--checkbox:last-child {
   margin-bottom: 0;
 }
 
 .form__button {
+  font-size: @font-size + 2px;
+  line-height: @line-height + 2px;
   color: @basic_white;
   text-transform: uppercase;
   padding: 7px 0;
