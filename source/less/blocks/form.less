@@ -12,11 +12,21 @@
   font-weight: 400;
   color: @basic_black;
   .clear;
-}
 
-.form__header--contacts {
-  margin-top: 26px;
-  margin-bottom: 32px;
+  &--contacts {
+    margin-top: 26px;
+    margin-bottom: 32px;
+  }
+
+  &--comment {
+    margin-top: 15px;
+    margin-bottom: 34px;
+  }
+
+  &--additionally {
+    margin-top: 27px;
+    margin-bottom: 34px;
+  }
 }
 
 .form__contact {
@@ -27,26 +37,12 @@
   list-style: none;
   .clear;
 
-  &--input {
-    margin-top: 20px;
-    margin-bottom: 24px;
+  &--radio {
+    border-top: 1px solid @border_grey;
+    border-bottom: 1px solid @border_grey;
+    padding-top: 26px;
+    padding-bottom: 28px;
   }
-
-  &--input:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.form__header--comment {
-  margin-top: 15px;
-  margin-bottom: 34px;
-}
-
-.form__list--radio {
-  border-top: 1px solid @border_grey;
-  border-bottom: 1px solid @border_grey;
-  padding-top: 26px;
-  padding-bottom: 28px;
 }
 
 .form__item {
@@ -80,32 +76,38 @@
   }
 }
 
-.form__input--text::placeholder,
-.form__input--email::placeholder,
-.form__input--mobile::placeholder,
-.form__textarea::placeholder {
-  color: @special_dark-grey;
-}
+.form__input {
+  &--text::placeholder,
+  &--email::placeholder,
+  &--mobile::placeholder,
+  &--textarea::placeholder {
+    color: @special_dark-grey;
+  }
 
-.form__input--email,
-.form__input--mobile {
-  font-family: "Oswald", sans-serif;
-  font-size: @font-size + 2px;
-  line-height: @line-height;
-  border: 1px solid @special_grey;
-}
+  &--email,
+  &--mobile {
+    font-family: "Oswald", sans-serif;
+    font-size: @font-size + 2px;
+    line-height: @line-height;
+    border: 1px solid @special_grey;
+  }
 
-.form__header--additionally {
-  margin-top: 27px;
-  margin-bottom: 34px;
-}
+  &--textarea,
+  &--text {
+    font-family: "Oswald", sans-serif;
+    font-size: @font-size + 2px;
+    line-height: @line-height;
+    border: 1px solid @border_grey-2;
+  }
 
-.form__textarea,
-.form__input--text {
-  font-family: "Oswald", sans-serif;
-  font-size: @font-size + 2px;
-  line-height: @line-height;
-  border: 1px solid @border_grey-2;
+  &--input {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  &--input:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__button {
