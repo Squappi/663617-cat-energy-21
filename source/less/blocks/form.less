@@ -1,0 +1,129 @@
+
+.form__header-medium {
+  font-size: @font-size;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @basic_black;
+}
+
+.form__header {
+  font-size: @font-size + 10px;
+  line-height: 26px;
+  font-weight: 400;
+  color: @basic_black;
+  .clear;
+
+  &--contacts {
+    margin-top: 26px;
+    margin-bottom: 32px;
+  }
+
+  &--comment {
+    margin-top: 15px;
+    margin-bottom: 34px;
+  }
+
+  &--additionally {
+    margin-top: 27px;
+    margin-bottom: 34px;
+  }
+}
+
+.form__contact {
+  color: @special_dark-grey;
+}
+
+.form__list {
+  list-style: none;
+  .clear;
+
+  &--radio {
+    border-top: 1px solid @border_grey;
+    border-bottom: 1px solid @border_grey;
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+}
+
+.form__item {
+  & label {
+    font-size: @font-size + 2px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &--full-name,
+  &--contact {
+    margin-bottom: 14px;
+  }
+
+  &--radio {
+    color: @special_dark-grey-2;
+    margin-bottom: 25px;
+  }
+
+  &--radio:last-child {
+    margin-bottom: 0;
+  }
+
+  &--checkbox {
+    margin-bottom: 13px;
+    color: @basic_black;
+  }
+
+  &--checkbox:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__input {
+  &--text::placeholder,
+  &--email::placeholder,
+  &--mobile::placeholder,
+  &--textarea::placeholder {
+    color: @special_dark-grey;
+  }
+
+  &--email,
+  &--mobile {
+    font-family: "Oswald", sans-serif;
+    font-size: @font-size + 2px;
+    line-height: @line-height;
+    border: 1px solid @special_grey;
+  }
+
+  &--textarea,
+  &--text {
+    font-family: "Oswald", sans-serif;
+    font-size: @font-size + 2px;
+    line-height: @line-height;
+    border: 1px solid @border_grey-2;
+  }
+
+  &--input {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  &--input:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__button {
+  font-family: "Oswald", sans-serif;
+  font-size: @font-size + 2px;
+  line-height: @line-height + 2px;
+  color: @basic_white;
+  text-transform: uppercase;
+  padding: 7px 0;
+  background-color: @basic_green;
+  border: none;
+}
+
+.form__text {
+  font-family: "Arial", sans-serif;
+  line-height: @line-height - 2px;
+  color: @basic_black;
+  text-align: center;
+}
