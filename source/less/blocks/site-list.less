@@ -14,3 +14,34 @@
   color: @basic_black;
   text-decoration: none;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    width: 440px;
+  }
+  .site-list__item {
+    font-size: @font-size + 4px;
+    line-height: @line-height + 6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    .clear;
+    margin-right: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    width: 478px;
+  }
+  .site-list__item {
+    font-size: @font-size + 6px;
+    line-height: @line-height + 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    .clear;
+    margin-right: 21px;
+  }
+}

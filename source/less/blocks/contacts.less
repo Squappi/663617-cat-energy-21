@@ -1,11 +1,20 @@
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .contacts__title {
-  font-size: 16px;
+  font-size: @font-size + 2px;
   color: @special_black;
   text-transform: uppercase;
+  width: 140px;
 }
 
 .contacts__text {
   font-family: "Arial", sans-serif;
-  line-height: 20px;
+  line-height: @line-height + 2px;
   color: @special_dark-grey;
+  width: 140px;
 }

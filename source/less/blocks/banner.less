@@ -1,6 +1,13 @@
 
-.banner__wrapper {
+.banner {
   background: @basic_green;
+}
+
+.banner__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 22px;
 }
 
 .banner__title {
@@ -16,6 +23,7 @@
 .banner__slogan {
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
   color: @basic_white;
 }
 
@@ -24,4 +32,25 @@
 .banner__button {
   font-size: @font-size;
   line-height: @line-height;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    background-color: @basic_white;
+  }
+
+  .banner__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 708px;
+    margin: 0 auto;
+    height: 316px;
+  }
+  .banner__title {
+    font-size: @font-size + 46px;
+    line-height: @line-height + 46px;
+    color: @basic_black;
+    .clear;
+  }
 }

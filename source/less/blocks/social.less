@@ -1,3 +1,16 @@
-.social__item {
+
+.social__list {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  .clear;
+  border-top: 1px solid @border_grey;
+  border-bottom: 1px solid @border_grey;
+  padding: 25px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    border: none;
+  }
 }
