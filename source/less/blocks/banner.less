@@ -4,10 +4,15 @@
 }
 
 .banner__wrapper {
+  position: relative;
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 22px;
+}
+
+.banner__header {
+  z-index: 2;
 }
 
 .banner__title {
@@ -27,6 +32,13 @@
   color: @basic_white;
 }
 
+.banner__img {
+  position: absolute;
+  top: 175px;
+  left: 82px;
+  z-index: 1;
+}
+
 // button
 
 .banner__button {
@@ -35,6 +47,7 @@
   width: 100%;
   font-size: @font-size;
   line-height: @line-height;
+  margin-top: 300px;
 }
 
 @media (min-width: @tablet-width) {
@@ -80,6 +93,7 @@
   .banner__button {
     width: 244px;
     padding: 0 14px;
+    margin: 0;
   }
 }
 
@@ -95,12 +109,16 @@
 
   .banner__header {
     display: flex;
-    justify-self: start;
+    flex-direction: row;
     flex-wrap: wrap;
     padding-left: 78px;
+    width: 414px;
   }
 
-  .banner__title {
-    padding-right: 727px;
+  .banner__img {
+    position: relative;
+    top: 0;
+    left: 0;
   }
+
 }
