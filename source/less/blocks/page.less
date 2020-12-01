@@ -1,0 +1,22 @@
+.page {
+  height: 100%;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 400;
+}
+
+.page__body {
+  min-height: 100%;
+  min-width: 320px;
+  .clear;
+}
+
+@media (min-width: @tablet-width) {
+  .page {
+    height: 100%;
+    font-size: @font-size + 2px;
+    line-height: @line-height + 6px;
+    font-weight: 400;
+  }
+}

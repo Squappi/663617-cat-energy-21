@@ -1,4 +1,11 @@
 
+.adventures {
+  width: 280px;
+  margin: 0 auto;
+  padding-right: 21px;
+  padding-left: 20px;
+}
+
 .adventures__header {
   font-size: 36px;
   line-height: 40px;
@@ -10,4 +17,32 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .adventures {
+    width: 708px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .adventures__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 104px;
+  }
+
+  .adventures__item {
+    width: 230px;
+    margin-bottom: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .adventures {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
 }
