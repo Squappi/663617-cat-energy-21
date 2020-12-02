@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
@@ -10,7 +11,7 @@
 </head>
 
 <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header__wrapper">
         <a class="page-header__logo">
             <img src="https://via.placeholder.com/150x150" alt="Логотип сайта">
         </a>
@@ -29,38 +30,40 @@
         <h1 class="page-main__header">Подбор программы</h1>
         <section class="form">
             <form class="form__wrapper" method="get" action="https://echo.htmlacademy.ru/">
-                <div class="form__container form__container--input">
-                    <h3 class="form__header-medium">Заполните анкету, и мы подберем программу питания для вашего кота</h3>
-                    <ul class="form__list form__list--input">
-                        <li class="form__item form__item--full-name">
-                            <label class="form__contact" for="form-name">Имя:*</label>
-                            <input class="form__input form__input--text" id="form-name" type="text" placeholder="7">
-                        </li>
-                        <li class="form__item form__item--full-name">
-                            <label class="form__contact" for="weight-mass">Вес(кг):*</label>
-                            <input class="form__input form__input--text" id="weight-mass" type="text" placeholder="7">
-                        </li>
-                        <li class="form__item form__item--full-name">
-                            <label class="form__contact" for="age">Возраст(лет):</label>
-                            <input class="form__input form__input--text" id="age" type="text" placeholder="7">
-                        </li>
-                    </ul>
-                </div>
-                <div class="form__container form__container--radio">
-                    <ul class="form__list form__list--radio">
-                        <li class="form__item form__item--radio">
-                            <label for="slimming">Похудение</label>
-                            <input class="form__input form__input--radio" id="slimming" type="radio" name="radio-form" value="Похудение" checked>
-                        </li>
-                        <li class="form__item form__item--radio">
-                            <label for="weight-gain">Набор массы</label>
-                            <input class="form__input form__input--radio" id="weight-gain" type="radio" name="radio-form" value="Набор массы">
-                        </li>
-                        <li class="form__item form__item--radio">
-                            <label for="uncertainty">Не знаю (Нужен ваш совет)</label>
-                            <input class="form__input form__input--radio" id="uncertainty" type="radio" name="radio-form" value="Не знаю">
-                        </li>
-                    </ul>
+                <h3 class="form__header-medium">Заполните анкету, и мы подберем программу питания для вашего кота</h3>
+                <div class="form__case">
+                    <div class="form__container form__container--input">
+                        <ul class="form__list form__list--input">
+                            <li class="form__item form__item--full-name">
+                                <label class="form__contact" for="form-name">Имя:*</label>
+                                <input class="form__input form__input--text" id="form-name" type="text" placeholder="7">
+                            </li>
+                            <li class="form__item form__item--full-name">
+                                <label class="form__contact" for="weight-mass">Вес(кг):*</label>
+                                <input class="form__input form__input--text" id="weight-mass" type="text" placeholder="7">
+                            </li>
+                            <li class="form__item form__item--full-name">
+                                <label class="form__contact" for="age">Возраст(лет):</label>
+                                <input class="form__input form__input--text" id="age" type="text" placeholder="7">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form__container form__container--radio">
+                        <ul class="form__list form__list--radio">
+                            <li class="form__item form__item--radio">
+                                <label for="slimming">Похудение</label>
+                                <input class="form__input form__input--radio" id="slimming" type="radio" name="radio-form" value="Похудение" checked>
+                            </li>
+                            <li class="form__item form__item--radio">
+                                <label for="weight-gain">Набор массы</label>
+                                <input class="form__input form__input--radio" id="weight-gain" type="radio" name="radio-form" value="Набор массы">
+                            </li>
+                            <li class="form__item form__item--radio">
+                                <label for="uncertainty">Не знаю (Нужен ваш совет)</label>
+                                <input class="form__input form__input--radio" id="uncertainty" type="radio" name="radio-form" value="Не знаю">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="form__container form__container--contacts">
                     <h2 class="form__header form__header--contacts form__header--wrapper">Контактные данные (владельца кота)</h2>
@@ -100,8 +103,10 @@
                         </li>
                     </ul>
                 </div>
-                <button class="form__button button-classic" type="submit">Отправить заявку</button>
-                <p class="form__text">* — Обязательные поля</p>
+                <div class="form__submit">
+                    <button class="form__button button-classic" type="submit">Отправить заявку</button>
+                    <p class="form__text">* — Обязательные поля</p>
+                </div>
             </form>
         </section>
     </main>

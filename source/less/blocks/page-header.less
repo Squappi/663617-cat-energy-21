@@ -1,10 +1,16 @@
 
+.page-header {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .page-main__header {
   width: 280px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   .clear;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,10 +20,21 @@
     width: 708px;
     margin: 0 auto;
   }
+
   .page-header__wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .page-main__header {
+    width: 632px;
+    margin: 0 auto;
+  }
+
+  .page-main__header {
+    font-size: @font-size + 46px;
+    line-height: @line-height + 42px;
   }
 
   .page-header__logo {
@@ -32,11 +49,13 @@
     width: 1220px;
     margin: 0 auto;
   }
+
   .page-header__wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
   .page-header__logo {
     width: 202px;
   }
