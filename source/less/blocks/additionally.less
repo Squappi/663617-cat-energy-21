@@ -1,4 +1,9 @@
 
+.additionally {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .additionally__wrapper {
   border-top: 1px solid @border_grey;
   border-bottom: 1px solid @border_grey;
@@ -19,9 +24,10 @@
   line-height: @line-height - 2px;
   font-weight: 400;
   color: @special_dark-grey-2;
+  .clear;
 }
 
-.additionally__continer {
+.additionally__crisper{
   display: flex;
   justify-content: space-between;
 }
@@ -29,4 +35,67 @@
 .additionally__text {
   line-height: @line-height - 4px;
   color: @special_dark-grey;
+}
+
+.additionally__button {
+  display: block;
+  text-align: center;
+}
+
+@media(min-width: @tablet-width) {
+  .additionally {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .additionally__header {
+    font-size: @font-size + 22px;
+    line-height: @line-height + 18px;
+  }
+
+  .additionally__wrapper {
+    border: 1px solid @special_grey;
+    padding: 26px 37px 20px 37px;
+  }
+
+  .additionally__crisper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .additionally__subtitle {
+    font-size: @font-size + 6px;
+    line-height: @line-height + 2px;
+  }
+
+  .additionally__text {
+    font-size: @font-size + 2px;
+    line-height: @line-height + 2px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .additionally {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .additionally__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .additionally__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 895px;
+    padding: 0;
+    border: none;
+    border-top: 1px solid @border_grey;
+    border-bottom: 1px solid @border_grey;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
 }
