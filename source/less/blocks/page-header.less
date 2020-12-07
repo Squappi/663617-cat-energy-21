@@ -1,5 +1,7 @@
 
 .page-header {
+  display: flex;
+  flex-direction: column;
   width: 280px;
   margin: 0 auto;
 }
@@ -11,6 +13,10 @@
   font-weight: 400;
   .clear;
   margin: 0 auto;
+}
+
+.page-header__logo {
+  order: 2;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,6 +45,7 @@
 
   .page-header__logo {
     width: 177px;
+    order: -1;
   }
 }
 
