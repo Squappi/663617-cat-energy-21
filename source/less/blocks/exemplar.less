@@ -7,6 +7,8 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 21px 0 20px;
+  margin-top: -8px;
+  margin-bottom: 50px;
 }
 
 .exemplar__header {
@@ -18,21 +20,62 @@
 
 .exemplar__description {
   font-family: "Arial", sans-serif;
+  width: 279px;
+  margin-top: 32px;
+}
+
+.exemplar__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -14px;
+}
+
+.exemplar__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .exemplar__span-upper {
+  width: 124px;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
+  border: 1px solid @border_grey;
+  border-radius: 3px;
+  padding: 15px 0 17px 0;
 }
 
 .exemplar__text {
+  width: 77px;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
+  margin: 0;
+  margin-top: -35px;
+}
+
+.exemplar__block {
+  display: flex;
+  width: 280px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .exemplar__title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  .clear;
+  padding-right: 3px;
+}
+
+.exemplar__title-span {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;

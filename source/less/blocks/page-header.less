@@ -1,6 +1,8 @@
 
 .page-header {
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -13,6 +15,11 @@
   margin: 0 auto;
 }
 
+.page-header__logo {
+  margin-top: 14px;
+  margin-left: 19px;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     display: grid;
@@ -22,9 +29,8 @@
   }
 
   .page-header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: min-content max-content;
   }
 
   .page-main__header {
@@ -39,6 +45,7 @@
 
   .page-header__logo {
     width: 177px;
+    order: -1;
   }
 }
 

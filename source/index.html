@@ -13,13 +13,13 @@
 <body class="page__body">
     <header class="page-header page-header__wrapper">
         <a class="page-header__logo">
-            <img src="https://via.placeholder.com/150x150" alt="Логотип сайта">
+            <img src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="34" height="38">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--opened">
             <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <div class="main-navigation__wrapper">
                 <ul class="main-navigation-list site-list">
-                    <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+                    <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
                     <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
                     <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
                 </ul>
@@ -40,6 +40,7 @@
         </section>
         <section class="features">
             <div class="features__wrapper">
+                <img class="features__img" src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="36" height="50">
                 <h2 class="visually-hidden">Функции кормов для котов</h2>
                 <div class="features__info features__info--slimming">
                     <h2 class="features__title">Похудение</h2>
@@ -48,6 +49,7 @@
                 <a class="features__button" href="catalog.html">Каталог slim</a>
             </div>
             <div class="features__wrapper">
+                <img class="features__img" src="https://via.placeholder.com/150x150" alt="Логотип сайта" width="36" height="50">
                 <h2 class="visually-hidden">Функции кормов для котов</h2>
                 <div class="features__info features__info--slimming">
                     <h2 class="features__title">Набор массы</h2>
@@ -75,23 +77,33 @@
                         <p class="exemplar__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
                         <div class="exemplar__wrap">
                             <div class="exemplar__list">
-                                <p class="exemplar__text"><span class="exemplar__span-upper">5 Дней</span>Снижение веса</p>
+                                <p class="exemplar__span-upper">5 кг</P>
+                                <p class="exemplar__text">снижение веса</p>
                             </div>
                             <div class="exemplar__list">
-                                <p class="exemplar__text"><span class="exemplar__span-upper">60 Дней</span>Затрачено времени</p>
+                                <p class="exemplar__span-upper">60 Дней</p>
+                                <p class="exemplar__text">затрачено времени</p>
                             </div>
-                            <h4 class="exemplar__title">Затраты на питание: <span class="exemplar__title--span">15 000 Руб.</span></h4>
+                            <div class="exemplar__block">
+                                <h4 class="exemplar__title">Затраты на питание:</h4>
+                                <span class="exemplar__title-span"> 15 000 Руб.</span>
+                            </div>
                         </div>
                     </div>
                     <div class="calculation">
-                        <img src="src=https://via.placeholder.com/150x150" alt="Большой кот">
-                        <label class="calculation__label calculation__label--cost">Было</label>
-                        <div class="calculation__range calculation__range--filter">
-                            <div class="calculation__background calculation__background--controls">
-                                <div class="calculation__scale"></div>
+                        <img class="calculation__img" src="https://via.placeholder.com/150x150" alt="Большой кот" width="280" height="303">
+                        <div class="calculation__wrapper">
+                            <label class="calculation__label calculation__label--cost">Было</label>
+                            <div class="calculation__range">
+                                <div class="calculation__background calculation__background--controls">
+                                    <div class="calculation__scale">
+                                        <div class="calculation__bar"></div>
+                                    </div>
+                                    <div class="calculation__toggle"></div>
+                                </div>
                             </div>
+                            <label class="calculation__label calculation__label--cost">Стало</label>
                         </div>
-                        <label class="calculation__label calculation__label--cost">Стало</label>
                     </div>
                 </div>
             </div>
@@ -99,7 +111,7 @@
         <footer class="page-footer">
             <div class="page-footer__wrapper">
                 <div class="page-footer__contacts contacts">
-                    <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+                    <p class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</p>
                     <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
                 </div>
                 <div class="page-footer__map">
@@ -107,10 +119,11 @@
                 </div>
             </div>
             <div class="page-footer__logo">
-                <div class="logo">
-                    <img src="https://via.placeholder.com/150x150" alt="Cat energy">
+                <div class="page-footer__logo-wrap">
+                    <img class="page-footer__logo-cart" src="https://via.placeholder.com/150x150" alt="Cat energy" width="280" height="380">
                 </div>
                 <div class="page-footer__social social">
+                    <img class="social__img" src="https://via.placeholder.com/150x150" alt="Cat energy" width="24" height="24">
                     <ul class="social__list">
                         <li class="social__item">
                             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
