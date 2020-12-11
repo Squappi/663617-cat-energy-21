@@ -24,8 +24,53 @@
 }
 
 .adventures__item {
+  position: relative;
   width: 200px;
   margin-bottom: 26px;
+
+  &--sheet::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: -80px;
+    background-image: url("../img/sheet.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--tube::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: -80px;
+    background-image: url("../img/tube.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--cutlery::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: -80px;
+    background-image: url("../img/cutlery.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--clock::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: -80px;
+    background-image: url("../img/clock.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -36,15 +81,23 @@
     border-bottom: 1px solid @border;
   }
 
+  .adventures__header {
+    font-size: @font-size + 46px;
+    line-height: @line-height + 42px;
+  }
+
   .adventures__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-right: 104px;
+    padding-right: 86px;
   }
 
   .adventures__item {
-    width: 230px;
+    display: flex;
+    align-items: flex-end;
+    width: 237px;
+    height: 229px;
     margin-bottom: 37px;
   }
 }

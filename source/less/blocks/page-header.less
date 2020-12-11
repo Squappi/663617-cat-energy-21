@@ -15,22 +15,47 @@
   margin: 0 auto;
 }
 
-.page-header__logo {
-  margin-top: 14px;
+
+
+.page-header__box {
+  margin-top: -5px;
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+}
+
+.page-header__logo img {
+  margin-top: 17px;
   margin-left: 19px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+    margin: 0;
+  }
+}
+
+.page-header__tagline {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__image {
+  margin-left: 52px;
+  margin-bottom: 8px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    display: grid;
-    grid-template-columns: min-content 1fr;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 708px;
     margin: 0 auto;
-  }
-
-  .page-header__wrapper {
-    display: grid;
-    grid-template-columns: min-content max-content;
+    margin-top: 30px;
   }
 
   .page-main__header {
