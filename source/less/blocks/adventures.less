@@ -17,60 +17,35 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   font-family: "Arial", sans-serif;
-  list-style: none;
+  list-style-type: none;
+  counter-reset: num;
   padding: 0;
   margin: 0;
   margin-top: 40px;
 }
 
 .adventures__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
-  width: 200px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
+}
 
-  &--sheet::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: -80px;
-    background-image: url("../img/sheet.svg");
-    background-repeat: no-repeat;
-  }
+.adventures__image {
+  width: 60px;
+  height: 60px;
+  background-color: @basic_green;
+  display: flex;
+  justify-content: center;
+  margin-top: -2px;
+}
 
-  &--tube::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: -80px;
-    background-image: url("../img/tube.svg");
-    background-repeat: no-repeat;
-  }
 
-  &--cutlery::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: -80px;
-    background-image: url("../img/cutlery.svg");
-    background-repeat: no-repeat;
-  }
-
-  &--clock::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: -80px;
-    background-image: url("../img/clock.svg");
-    background-repeat: no-repeat;
-  }
+.adventures__text {
+  width: 199px;
+  .clear;
 }
 
 @media (min-width: @tablet-width) {
@@ -79,6 +54,7 @@
     margin: 0 auto;
     padding: 0 30px;
     border-bottom: 1px solid @border;
+    margin-top: -25px;
   }
 
   .adventures__header {
@@ -95,10 +71,35 @@
 
   .adventures__item {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     width: 237px;
-    height: 229px;
-    margin-bottom: 37px;
+    height: 205px;
+    margin-bottom: 110px;
+  }
+
+  .adventures__image {
+    width: 80px;
+    height: 80px;
+    margin-top: 21px;
+  }
+
+  .adventures__text {
+    width: 230px;
+  }
+
+  .adventures__item::after {
+    position: absolute;
+    z-index: -1;
+    content: counter(num);
+    counter-increment: num;
+    top: -20px;
+    right: -7px;
+    font-size: @font-size + 266px;
+    line-height: @line-height + 262px;
+    font-family: 'Oswald';
+    font-weight: 400;
+    color: @basic_grey;
+    height: 100%;
   }
 }
 
@@ -107,5 +108,19 @@
     width: 1220px;
     margin: 0 auto;
     padding: 0 110px;
+    margin-top: -10px;
+    border: none;
+  }
+
+  .adventures__item {
+    width: 160px;
+  }
+
+  .adventures__item::after {
+    right: -89px;
+  }
+
+  .adventures__text {
+    width: 245px;
   }
 }

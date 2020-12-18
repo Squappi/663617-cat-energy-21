@@ -1,8 +1,9 @@
 
 .banner {
-  background: linear-gradient(@basic_green 63%, @basic_white 63%);
+  background: linear-gradient(rgba(104, 183, 56, 0.85) 63%, @basic_white 63%), url("../img/index-background-desktop.png");
   margin-top: -3px;
   margin-bottom: 24px;
+  background-repeat: no-repeat;
 }
 
 .banner__wrapper {
@@ -25,7 +26,7 @@
   color: @basic_white;
   padding: 0;
   margin: 0;
-  padding-top: 26px;
+  padding-top: 29px;
   margin-bottom: 24px;
 }
 
@@ -38,7 +39,7 @@
 
 .banner__img {
   position: absolute;
-  top: 165px;
+  top: 169px;
   z-index: 1;
 }
 
@@ -72,7 +73,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 87px;
-    margin-top: 66px;
+    margin-top: 71px;
   }
 
   .banner__title {
@@ -98,21 +99,30 @@
   .banner__img {
     order: 1;
     position: absolute;
-    width: 628px;
-    height: 609px;
-    top: 267px;
-    left: 99px;
+    top: 272px;
+    left: 20px;
     z-index: 1;
   }
 
   .banner__button {
-    width: 244px;
-    padding: 0 14px;
-    margin: 0;
+    width: 239px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 2px;
+    margin: 0px;
+    margin-top: 28px;
+    margin-left: -5px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .banner {
+    margin-top: -101px;
+    background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, @basic_white 50%), url("../img/index-background-desktop-1.png");
+    padding-bottom: 380px;
+    background-repeat: no-repeat;
+  }
+
   .banner__wrapper {
     display: flex;
     justify-content: space-between;
@@ -126,17 +136,24 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 78px;
-    width: 414px;
+    padding-left: 79px;
+    width: 415px;
+    margin-top: 225px;
   }
 
   .banner__img {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 143px;
+    left: 468px;
   }
 
   .banner__title {
     padding: 0;
+    margin-right: 1px;
+  }
+
+  .banner__button {
+    margin-top: 31px;
+    margin-left: 1px;
   }
 }
