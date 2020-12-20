@@ -39,6 +39,7 @@
   background-color: @basic_green;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: -2px;
 }
 
@@ -103,6 +104,11 @@
   }
 }
 
+.adventures__item:first-child::after {
+  top: -18px;
+  right: 7px;
+}
+
 @media (min-width: @desktop-width) {
   .adventures {
     width: 1220px;
@@ -118,6 +124,11 @@
 
   .adventures__item::after {
     right: -89px;
+  }
+
+  .adventures__item:first-child::after {
+    top: -18px;
+    right: -69px;
   }
 
   .adventures__text {
