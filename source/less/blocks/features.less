@@ -14,6 +14,42 @@
 
 .features__img {
   position: absolute;
+  top: 22px;
+  left: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 206px;
+    top: 82px;
+    left: 447px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 106px;
+    top: 41px;
+    left: 52px;
+  }
+}
+
+.features__image {
+  position: absolute;
+  top: 26px;
+  left: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 200px;
+    top: 91px;
+    left: 413px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 100px;
+    top: 47px;
+    left: 36px;
+  }
 }
 
 .features__title {
@@ -35,8 +71,14 @@
   padding-bottom: 23px;
 }
 
+.features__box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .features__button {
   display: block;
+  position: relative;
   font-size: @font-size + 2px;
   line-height: @line-height - 2px;
   text-transform: uppercase;
@@ -45,11 +87,30 @@
   margin-top: 19px;
 }
 
+.features__button::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  top: 2px;
+  left: 100px;
+  background-image: url("../img/arrow.svg");
+}
+
+.features__button:hover::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  background-size: cover;
+}
+
 @media (min-width: @tablet-width) {
   .features {
     width: 708px;
     margin: 0 auto;
     padding: 0 30px;
+    margin-top: 565px;
+    margin-bottom: 70px;
   }
 
   .features__wrapper {
@@ -57,8 +118,32 @@
     margin-bottom: 30px;
   }
 
+  .features__title {
+    font-size: @font-size + 22px;
+    line-height: @line-height + 18px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-bottom: 26px;
+  }
+
   .features__description {
     border: none;
+    width: 377px;
+
+    &--width {
+      width: 342px;
+    }
+  }
+
+  .features__button {
+    font-size: @font-size + 6px;
+    line-height: @line-height + 12px;
+    margin-top: 27px;
+  }
+
+  .features__button::before {
+    top: 8px;
+    left: 131px;
   }
 }
 
@@ -68,6 +153,7 @@
     justify-content: space-between;
     width: 1220px;
     margin: 0 auto;
+    margin-top: 81px;
   }
 
   .features__wrapper {
@@ -81,10 +167,20 @@
     font-weight: 400;
     text-transform: uppercase;
     color: @basic_black;
-    text-align: center;
+    text-align: auto;
+    margin-left: 162px;
   }
 
   .features__description {
     width: 467px;
+    margin-top: 75px;
+  }
+
+  .features__button {
+    margin-top: 4px;
+  }
+
+  .features__button::before {
+    left: 134px;
   }
 }

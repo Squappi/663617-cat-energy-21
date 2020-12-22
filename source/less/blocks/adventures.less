@@ -17,15 +17,76 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   font-family: "Arial", sans-serif;
-  list-style: none;
+  list-style-type: none;
+  counter-reset: num;
   padding: 0;
   margin: 0;
   margin-top: 40px;
 }
 
 .adventures__item {
-  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
   margin-bottom: 26px;
+
+  &--sheet::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--tube::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_tub.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--cutlery::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_eat.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--clock::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_alarm.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
+.adventures__text {
+  width: 199px;
+  .clear;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,19 +95,87 @@
     margin: 0 auto;
     padding: 0 30px;
     border-bottom: 1px solid @border;
+    margin-top: -25px;
+  }
+
+  .adventures__header {
+    font-size: @font-size + 46px;
+    line-height: @line-height + 42px;
   }
 
   .adventures__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-right: 104px;
+    padding-right: 86px;
   }
 
   .adventures__item {
-    width: 230px;
-    margin-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 237px;
+    height: 205px;
+    margin-bottom: 110px;
+
+    &--sheet::before {
+      width: 80px;
+      height: 80px;
+      top: 21px;
+      left: -1px;
+    }
+
+    &--tube::before {
+      width: 80px;
+      height: 80px;
+      top: 21px;
+      left: -1px;
+    }
+
+    &--cutlery::before {
+      width: 80px;
+      height: 80px;
+      top: 23px;
+      left: 0px;
+    }
+
+    &--clock::before {
+      width: 80px;
+      height: 80px;
+      top: 23px;
+      left: 0px;
+    }
   }
+
+  .adventures__image {
+    width: 80px;
+    height: 80px;
+    margin-top: 21px;
+  }
+
+  .adventures__text {
+    width: 246px;
+  }
+
+  .adventures__item::after {
+    position: absolute;
+    z-index: -1;
+    content: counter(num);
+    counter-increment: num;
+    top: -20px;
+    right: -7px;
+    font-size: @font-size + 266px;
+    line-height: @line-height + 262px;
+    font-family: 'Oswald';
+    font-weight: 400;
+    color: @basic_grey;
+    height: 100%;
+  }
+}
+
+.adventures__item:first-child::after {
+  top: -18px;
+  right: 7px;
 }
 
 @media (min-width: @desktop-width) {
@@ -54,5 +183,24 @@
     width: 1220px;
     margin: 0 auto;
     padding: 0 110px;
+    margin-top: -10px;
+    border: none;
+  }
+
+  .adventures__item {
+    width: 160px;
+  }
+
+  .adventures__item::after {
+    right: -89px;
+  }
+
+  .adventures__item:first-child::after {
+    top: -18px;
+    right: -69px;
+  }
+
+  .adventures__text {
+    width: 245px;
   }
 }
