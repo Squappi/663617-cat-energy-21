@@ -64,6 +64,7 @@
   text-align: center;
   margin: 0;
   margin-top: -35px;
+  background-color: @basic_grey-2;
 }
 
 .exemplar__block {
@@ -137,6 +138,7 @@
     line-height: @line-height - 4px;
     margin-top: -40px;
     width: 127px;
+    background-color: @basic_white;
   }
 
   .exemplar__block {
@@ -162,7 +164,7 @@
 
 @media (min-width: @desktop-width) {
   .exemplar {
-    background: @basic_grey;
+    background: linear-gradient(#FFFFFF 23%, #EAEAEA 23%);
     margin-top: 16px;
   }
 
@@ -200,5 +202,9 @@
 
   .exemplar__title {
     .clear;
+  }
+
+  .exemplar__text {
+    background-color: #EAEAEA;
   }
 }

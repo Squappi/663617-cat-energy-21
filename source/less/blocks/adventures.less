@@ -25,24 +25,64 @@
 }
 
 .adventures__item {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 22px;
-}
+  margin-bottom: 26px;
 
-.adventures__image {
-  width: 60px;
-  height: 60px;
-  background-color: @basic_green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -2px;
-}
+  &--sheet::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
 
+  &--tube::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_tub.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--cutlery::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_eat.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--clock::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: -81px;
+    background-color: @basic_green;
+    background-image: url("../img/icon_alarm.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
 
 .adventures__text {
   width: 199px;
@@ -73,9 +113,38 @@
   .adventures__item {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 237px;
     height: 205px;
     margin-bottom: 110px;
+
+    &--sheet::before {
+      width: 80px;
+      height: 80px;
+      top: 21px;
+      left: -1px;
+    }
+
+    &--tube::before {
+      width: 80px;
+      height: 80px;
+      top: 21px;
+      left: -1px;
+    }
+
+    &--cutlery::before {
+      width: 80px;
+      height: 80px;
+      top: 23px;
+      left: 0px;
+    }
+
+    &--clock::before {
+      width: 80px;
+      height: 80px;
+      top: 23px;
+      left: 0px;
+    }
   }
 
   .adventures__image {
@@ -85,7 +154,7 @@
   }
 
   .adventures__text {
-    width: 230px;
+    width: 246px;
   }
 
   .adventures__item::after {
