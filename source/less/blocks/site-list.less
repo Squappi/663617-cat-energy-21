@@ -9,6 +9,10 @@
   padding: 23px 0;
 }
 
+.site-list__item:last-child {
+  border-bottom: 1px solid @border;
+}
+
 .site-list__item a {
   color: @basic_black;
   text-decoration: none;
@@ -32,6 +36,7 @@
 
   .site-list__item:last-child {
     margin-right: 0;
+    border: none;
   }
 
   .site-list__link {
@@ -57,6 +62,10 @@
 
   .site-list__item a {
     color: @basic_white;
+  }
+
+  .site-list__item-color a {
+    color: @basic_black;
   }
 
   .site-list__link {
