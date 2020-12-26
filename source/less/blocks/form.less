@@ -109,9 +109,9 @@
     content: "";
     top: 5px;
     right: -214px;
-    width: 18px;
-    height: 13px;
-    background-image: url("../img/message.svg");
+    width: 19px;
+    height: 14px;
+    background-image: url("../img/icon_email.svg");
     background-repeat: no-repeat;
   }
 
@@ -152,7 +152,6 @@
 }
 
 .form__item {
-
   &--full-name,
   &--contact {
     margin-bottom: 14px;
@@ -190,10 +189,20 @@
   &--text::placeholder,
   &--email::placeholder,
   &--mobile::placeholder,
-  &--textarea::placeholder {
+  &--textarea::placeholder,
+  &--age::placeholder,
+  &--weight::placeholder {
     color: @special_dark-grey;
     text-transform: uppercase;
     padding-left: 11px;
+  }
+
+  &--text::placeholder {
+    padding-left: 10px;
+  }
+
+  &--email::placeholder {
+    padding-left: 13px;
   }
 
   &--textarea::placeholder {
@@ -202,7 +211,9 @@
 
   &--email,
   &--text,
-  &--mobile {
+  &--mobile,
+  &--age,
+  &--weight {
     height: 42px;
     flex: 1;
   }
@@ -218,7 +229,9 @@
   }
 
   &--textarea,
-  &--text {
+  &--text,
+  &--age,
+  &--weight {
     font-family: "Oswald", sans-serif;
     font-size: @font-size + 2px;
     line-height: @line-height;
@@ -425,8 +438,44 @@
 
     &--email,
     &--text,
-    &--mobile {
+    &--mobile,
+    &--age,
+    &--weight  {
       height: 46px;
+    }
+
+    &--email,
+    &--mobile,
+    &--textarea,
+    &--text,
+    &--age,
+    &--weight  {
+      font-size: @font-size + 6px;
+      line-height: @line-height + 12px;
+    }
+
+    &--text::placeholder {
+      padding-left: 15px;
+    }
+
+    &--age {
+      padding-left: 10px;
+    }
+
+    &--weight {
+      padding-left: 13px;
+    }
+
+    &--email::placeholder {
+      padding-left: 19px;
+    }
+
+    &--textarea {
+      height: 170px;
+    }
+
+    &--textarea::placeholder {
+      padding-left: 15px;
     }
 
     &--radio+label::before {
@@ -469,24 +518,6 @@
 
     &--radio {
       margin-bottom: 23px;
-    }
-  }
-
-  .form__input {
-    &--email,
-    &--mobile,
-    &--textarea,
-    &--text {
-      font-size: @font-size + 6px;
-      line-height: @line-height + 12px;
-    }
-
-    &--textarea {
-      height: 170px;
-    }
-
-    &--textarea::placeholder {
-      padding-left: 15px;
     }
   }
 
@@ -542,6 +573,7 @@
       width: 570px;
       margin: 0;
       margin-top: -14px;
+      margin-bottom: 17px;
     }
 
     &--contacts {
@@ -601,8 +633,16 @@
       padding-left: 19px;
     }
 
+    &--age::placeholder {
+      padding-left: 8px;
+    }
+
     &--mobile::placeholder{
       padding-left: 14px;
+    }
+
+    &--textarea::placeholder {
+      padding-top: 7px;
     }
   }
 
