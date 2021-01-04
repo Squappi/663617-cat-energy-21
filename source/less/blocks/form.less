@@ -238,6 +238,25 @@
     border: 1px solid @border_grey-2;
   }
 
+  &--text:hover,
+  &--email:hover,
+  &--mobile:hover,
+  &--textarea:hover,
+  &--age:hover,
+  &--weight:hover{
+    border: 1px solid @special_grey;
+  }
+
+  &--text:focus,
+  &--email:focus,
+  &--mobile:focus,
+  &--textarea:focus,
+  &--age:focus,
+  &--weight:focus {
+    border: 2px solid @special_dark-grey;
+    outline: none;
+  }
+
   &--textarea {
     width: 100%;
     margin-bottom: -3px;
@@ -315,6 +334,15 @@
     background-repeat: no-repeat;
     background-position: 50%;
   }
+
+  &--checkbox:hover+label::before,
+  &--checkbox:checked:hover+label::before,
+  &--checkbox:focus+label::before,
+  &--checkbox:checked:focus+label::before {
+    border: 1px solid @special_grey-5;
+  }
+
+
 }
 
 .form__submit {
