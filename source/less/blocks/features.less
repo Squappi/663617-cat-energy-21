@@ -95,18 +95,19 @@
   top: 2px;
   left: 100px;
   background: url("../img/arrow.svg") no-repeat;
+  background-position-x: -9px;
 }
 
 .features__button:hover.features__button::before {
   content: "";
   position: absolute;
   width: 32px;
-  background-size: 100% 12px;
-  // background-position: right;
-  // background-repeat: no-repeat;
-  // background-size: contain;
+  background-position: 0;
 }
 
+.features__button:active {
+  opacity: 0.3;
+}
 
 @media (min-width: @tablet-width) {
   .features {

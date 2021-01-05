@@ -8,6 +8,15 @@
   text-decoration: none;
 }
 
-.button-classic:hover {
+.button-classic:hover,
+.button-classic:focus {
   background-color: @basic_green-2;
+}
+
+.button-classic:active {
+  background-color: @basic_green-2;
+}
+
+.button-classic:active span {
+  opacity: 0.3;
 }

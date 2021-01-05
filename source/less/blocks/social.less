@@ -28,15 +28,24 @@
   margin-bottom: 28px;
 }
 
-.social__link-vkontakte:hover,
-.social__link-instagram:hover,
-.social__link-facebook:hover,
-.copyright__html:hover,
-.social__link-vkontakte:focus,
-.social__link-instagram:focus,
-.social__link-facebook:focus,
-.copyright__html:focus {
+.social__link:hover .social__link-vkontakte path,
+.social__link:hover .social__link-instagram path,
+.copyright__link:hover .copyright__html path,
+.social__link:focus .social__link-vkontakte path,
+.social__link:focus .social__link-instagram path,
+.copyright__link:focus .copyright__html path    {
   fill: @basic_green;
+}
+
+.social__link:hover .social__link-facebook path,
+.social__link:focus .social__link-facebook path {
+  stroke: @basic_green;
+}
+
+.social__link-facebook:active,
+.social__link-instagram:active,
+.social__link-vkontakte:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
