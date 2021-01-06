@@ -111,7 +111,7 @@
     right: -214px;
     width: 19px;
     height: 14px;
-    background-image: url("../img/icon_email.svg");
+    background-image: url("../img/icon-email.svg");
     background-repeat: no-repeat;
   }
 
@@ -210,6 +210,10 @@
     padding-left: 14px;
   }
 
+  &--email {
+    order: 1;
+  }
+
   &--textarea {
     padding-top: 12px;
     padding-left: 13px;
@@ -264,6 +268,10 @@
     margin-bottom: -2px;
   }
 
+  &--email:disabled+label::before {
+    background-image: url("../img/massage-green.svg");
+  }
+
   &--text.modal-error,
   &--email.modal-error,
   &--mobile.modal-error,
@@ -274,12 +282,8 @@
     margin-bottom: -2px;
   }
 
-  &--email.modal-error,
-  .form__union--message::before {
+  &--email.modal-error+label::before {
     background-image: url("../img/message-error.svg");
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0px;
   }
 
   &--textarea {
@@ -355,7 +359,7 @@
     vertical-align: middle;
     top: -2px;
     left: -46px;
-    background-image: url("../img/checkbox_icon.svg");
+    background-image: url("../img/checkbox-icon.svg");
     background-repeat: no-repeat;
     background-position: 50%;
   }
