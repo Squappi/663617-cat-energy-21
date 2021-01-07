@@ -66,11 +66,11 @@
                             </li>
                             <li class="form__item form__item--full-name">
                                 <label class="form__union form__union--contact" for="weight-mass">Вес (кг):*</label>
-                                <input class="form__input form__input--weight" id="weight-mass" type="text" placeholder="7" required>
+                                <input class="form__input form__input--weight" id="weight-mass" type="number" placeholder="7" required>
                             </li>
                             <li class="form__item form__item--full-name">
                                 <label class="form__union form__union--contact" for="age">Возраст (лет):</label>
-                                <input class="form__input form__input--age" id="age" type="text" placeholder="7" required>
+                                <input class="form__input form__input--age" id="age" type="number" placeholder="7">
                             </li>
                         </ul>
                     </div>
@@ -97,12 +97,12 @@
                     </div>
                     <ul class="form__list form__list--contacts">
                         <li class="form__item form__item--contact">
+                            <input class="form__input form__input--email" id="form-email" type="email" placeholder="kuklachev@gmail.com" required>
                             <label class="form__union form__union--case form__union--message" for="form-email">E-mail:*</label>
-                            <input class="form__input form__input--email" id="form-email" type="text" placeholder="kuklachev@gmail.com" required>
                         </li>
                         <li class="form__item form__item--contact">
                             <label class="form__union form__union--case form__union--phone" for="weight">Телефон:*</label>
-                            <input class="form__input form__input--mobile" id="weight" type="tel" placeholder="8 (960) 900-60-90" required>
+                            <input class="form__input form__input--mobile" id="weight" type="number" placeholder="8 (960) 900-60-90" required>
                         </li>
                     </ul>
                 </div>
@@ -111,7 +111,7 @@
                         <h2 class="form__header form__header--comment">Комментарий</h2>
                     </div>
                     <div class="form__textarea">
-                        <textarea class="form__input form__input--textarea" name="comment" id="comment-field" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
+                        <textarea class="form__input form__input--textarea" name="comment" id="comment-field" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
                     </div>
                 </div>
                 <div class="form__container form__container--checkbox">
@@ -138,7 +138,7 @@
                     </ul>
                 </div>
                 <div class="form__submit">
-                    <button class="form__button button-classic" type="submit">Отправить заявку</button>
+                    <button class="form__button button-classic" type="submit"><span>Отправить заявку</span></button>
                     <p class="form__text">* — Обязательные поля</p>
                 </div>
             </form>
@@ -210,13 +210,14 @@
             <div class="page-footer__copyright copyright">
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
                     <b class="copyright__text">HTML Academy</b>
-                </a>
-                <a class="copyright__link">
-                    <img src="img/logo_html.svg" width="27" height="34">
+                    <svg class="copyright__html" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+                </svg>
                 </a>
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

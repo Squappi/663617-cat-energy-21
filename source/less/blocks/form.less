@@ -34,7 +34,7 @@
   }
 
   &--additionally {
-    margin-top: 27px;
+    margin-top: 17px;
     margin-bottom: 39px;
   }
 }
@@ -111,7 +111,7 @@
     right: -214px;
     width: 19px;
     height: 14px;
-    background-image: url("../img/icon_email.svg");
+    background-image: url("../img/icon-email.svg");
     background-repeat: no-repeat;
   }
 
@@ -186,27 +186,37 @@
 }
 
 .form__input {
-  &--text::placeholder,
-  &--email::placeholder,
-  &--mobile::placeholder,
-  &--textarea::placeholder,
-  &--age::placeholder,
-  &--weight::placeholder {
+  &--text,
+  &--email,
+  &--mobile,
+  &--textarea,
+  &--age,
+  &--weight {
     color: @special_dark-grey;
     text-transform: uppercase;
-    padding-left: 11px;
   }
 
-  &--text::placeholder {
+  &--text {
     padding-left: 10px;
   }
 
-  &--email::placeholder {
-    padding-left: 13px;
+  &--weight {
+    padding-left: 15px;
   }
 
-  &--textarea::placeholder {
-    padding-top: 10px;
+  &--age,
+  &--email,
+  &--mobile {
+    padding-left: 14px;
+  }
+
+  &--email {
+    order: 1;
+  }
+
+  &--textarea {
+    padding-top: 12px;
+    padding-left: 13px;
   }
 
   &--email,
@@ -236,6 +246,44 @@
     font-size: @font-size + 2px;
     line-height: @line-height;
     border: 1px solid @border_grey-2;
+  }
+
+  &--text:hover,
+  &--email:hover,
+  &--mobile:hover,
+  &--textarea:hover,
+  &--age:hover,
+  &--weight:hover{
+    border: 1px solid @special_grey;
+  }
+
+  &--text:focus,
+  &--email:focus,
+  &--mobile:focus,
+  &--textarea:focus,
+  &--age:focus,
+  &--weight:focus {
+    border: 2px solid @special_dark-grey;
+    outline: none;
+    margin-bottom: -2px;
+  }
+
+  &--email:disabled+label::before {
+    background-image: url("../img/massage-green.svg");
+  }
+
+  &--text.modal-error,
+  &--email.modal-error,
+  &--mobile.modal-error,
+  &--textarea.modal-error,
+  &--age.modal-error,
+  &--weight.modal-error {
+    border: 2px solid @status_error;
+    margin-bottom: -2px;
+  }
+
+  &--email.modal-error+label::before {
+    background-image: url("../img/message-error.svg");
   }
 
   &--textarea {
@@ -311,9 +359,25 @@
     vertical-align: middle;
     top: -2px;
     left: -46px;
-    background-image: url("../img/checkbox_icon.svg");
+    background-image: url("../img/checkbox-icon.svg");
     background-repeat: no-repeat;
     background-position: 50%;
+  }
+
+  &--checkbox:disabled+label,
+  &--radio:disabled+label {
+    opacity: 0.3;
+  }
+
+  &--radio:hover+label::before,
+  &--radio:checked:hover+label::before,
+  &--radio:focus+label::before,
+  &--radio:checked:focus+label::before,
+  &--checkbox:hover+label::before,
+  &--checkbox:checked:hover+label::before,
+  &--checkbox:focus+label::before,
+  &--checkbox:checked:focus+label::before {
+    border: 1px solid @special_grey-5;
   }
 }
 
@@ -346,6 +410,10 @@
     width: max-content;
     padding-left: 40px;
     padding-right: 40px;
+
+    &--additionally {
+      margin-top: -78px;
+    }
   }
 
   .form__header-medium {
@@ -454,28 +522,26 @@
       line-height: @line-height + 12px;
     }
 
-    &--text::placeholder {
-      padding-left: 15px;
-    }
-
-    &--age {
-      padding-left: 10px;
+    &--text {
+      padding-left: 17px;
     }
 
     &--weight {
-      padding-left: 13px;
+      padding-left: 21px;
     }
 
-    &--email::placeholder {
-      padding-left: 19px;
+    &--age,
+    &--email {
+      padding-left: 21px;
+    }
+
+    &--mobile {
+      padding-left: 17px;
     }
 
     &--textarea {
-      height: 170px;
-    }
-
-    &--textarea::placeholder {
-      padding-left: 15px;
+      padding-top: 10px;
+      padding-left: 17px;
     }
 
     &--radio+label::before {
@@ -542,6 +608,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form__header {
+    &--additionally {
+      margin-top: -48px;
+    }
+  }
 
   .form__header-medium {
     width: 1220px;
@@ -628,21 +699,12 @@
   }
 
   .form__input {
-    &--text::placeholder,
-    &--email::placeholder{
+    &--text {
+      padding-left: 18px;
+    }
+
+    &--age {
       padding-left: 19px;
-    }
-
-    &--age::placeholder {
-      padding-left: 8px;
-    }
-
-    &--mobile::placeholder{
-      padding-left: 14px;
-    }
-
-    &--textarea::placeholder {
-      padding-top: 7px;
     }
   }
 
@@ -653,7 +715,7 @@
 
   .form__submit {
     width: 1220px;
-    margin-bottom: 87px;
+    margin-bottom: 75px;
   }
 
   .form__button {
