@@ -20,8 +20,8 @@
 .main-navigation--closed .main-navigation__toggle::before {
   position: absolute;
   content: "";
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 24px;
   height: 1.5px;
   background-color: @basic_black;
@@ -65,9 +65,8 @@
   }
 }
 
-@media(min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .main-navigation {
     margin-top: 58px;
   }
-
 }
