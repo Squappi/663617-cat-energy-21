@@ -5,8 +5,8 @@
 
 .main-navigation__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -43px;
+  right: 20px;
   z-index: 2;
   display: block;
   width: 24px;
@@ -17,19 +17,19 @@
   outline: none;
 }
 
-.main-navigation--closed .main-navigation__toggle::before {
+.main-navigation__toggle--closed::before {
   position: absolute;
   content: "";
-  top: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
   width: 24px;
   height: 1.5px;
   background-color: @basic_black;
   box-shadow: 0 8px 0 0 @basic_black, 0 16px 0 0 @basic_black;
 }
 
-.main-navigation--opened .main-navigation__toggle {
-  top: -30px;
+.main-navigation__toggle--opened {
+  top: -43px;
   right: 21px;
 
   &::before,
@@ -65,9 +65,8 @@
   }
 }
 
-@media(min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .main-navigation {
     margin-top: 58px;
   }
-
 }

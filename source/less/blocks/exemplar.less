@@ -93,7 +93,7 @@
 @media (min-width: @tablet-width) {
   .exemplar {
     padding: 0;
-    background: linear-gradient(#FFFFFF 55%, #EAEAEA 55%);
+    background: linear-gradient(@basic_white 55%, @basic_grey-2 55%);
     margin-top: 37px;
     padding-bottom: 69px;
   }
@@ -140,8 +140,9 @@
     font-size: @font-size;
     line-height: @line-height - 4px;
     margin-top: -40px;
-    width: 127px;
+    width: auto;
     background-color: @basic_white;
+    padding: 0 8px;
   }
 
   .exemplar__block {
@@ -167,7 +168,7 @@
 
 @media (min-width: @desktop-width) {
   .exemplar {
-    background: linear-gradient(#FFFFFF 23%, #EAEAEA 23%);
+    background: linear-gradient(@basic_white 23%, @basic_grey-2 23%);
     margin-top: 16px;
   }
 
@@ -191,7 +192,7 @@
     display: flex;
     justify-content: space-between;
     width: 367px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 35px;
   }
 
@@ -208,6 +209,6 @@
   }
 
   .exemplar__text {
-    background-color: #EAEAEA;
+    background-color: @basic_grey-2;
   }
 }
