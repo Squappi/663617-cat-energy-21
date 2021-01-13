@@ -5,18 +5,18 @@ const iconEmail = document.querySelector(".form__input--email");
 const iconMobile = document.querySelector(".form__input--mobile");
 const textArea = document.querySelector(".form__input--textarea");
 const button = document.querySelector(".form__button");
-const closerNavBar = document.querySelector('.main-navigation__toggle');
-const navBar = document.querySelector('.main-navigation__wrapper');
+const closerNavBar = document.querySelector(".main-navigation__toggle");
+const navBar = document.querySelector(".main-navigation__wrapper");
 
-closerNavBar.addEventListener('click', function(evt) {
-    if (closerNavBar.classList.contains('main-navigation__toggle--closed')) {
-        closerNavBar.classList.add('main-navigation__toggle--opened');
-        closerNavBar.classList.remove('main-navigation__toggle--closed');
-        navBar.classList.remove('visually-hidden');
+closerNavBar.addEventListener("click", function(evt) {
+    if (closerNavBar.classList.contains("main-navigation__toggle--closed")) {
+        closerNavBar.classList.add("main-navigation__toggle--opened");
+        closerNavBar.classList.remove("main-navigation__toggle--closed");
+        navBar.classList.remove("visually-hidden");
     } else {
-        closerNavBar.classList.remove('main-navigation__toggle--opened');
-        closerNavBar.classList.add('main-navigation__toggle--closed');
-        navBar.classList.add('visually-hidden');
+        closerNavBar.classList.remove("main-navigation__toggle--opened");
+        closerNavBar.classList.add("main-navigation__toggle--closed");
+        navBar.classList.add("visually-hidden");
     }
 });
 
