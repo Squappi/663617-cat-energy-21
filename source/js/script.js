@@ -7,6 +7,7 @@ const textArea = document.querySelector(".form__input--textarea");
 const button = document.querySelector(".form__button");
 const closerNavBar = document.querySelector(".main-navigation__toggle");
 const navBar = document.querySelector(".main-navigation__wrapper");
+const mediaQuery = window.matchMedia('(min-width: 325px)')
 
 closerNavBar.addEventListener("click", function(evt) {
     if (closerNavBar.classList.contains("main-navigation__toggle--closed")) {
@@ -19,6 +20,14 @@ closerNavBar.addEventListener("click", function(evt) {
         navBar.classList.add("visually-hidden");
     }
 });
+
+if (!mediaQuery.matches) {
+    document.addEventListener("DOMContentLoaded", function(evt) {
+        closerNavBar.classList.remove("main-navigation__toggle--opened");
+        closerNavBar.classList.add("main-navigation__toggle--closed");
+        navBar.classList.add("visually-hidden");
+    });
+}
 
 if (iconName && iconWeight && iconAge && iconEmail && textArea && iconMobile && button) {
     function checkName(value) {

@@ -16,7 +16,7 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  font-family: "Arial", "Tahoma", sans-serif;
+  font-family: "Arial", sans-serif;
   list-style-type: none;
   counter-reset: num;
   padding: 0;
@@ -159,6 +159,8 @@
 
   .adventures__text {
     width: 246px;
+    font-size: @font-size + 2px;
+    line-height: @line-height + 6px;
   }
 
   .adventures__item::after {
@@ -170,7 +172,7 @@
     right: -7px;
     font-size: @font-size + 266px;
     line-height: @line-height + 262px;
-    font-family: "Oswald", "Tahoma", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 400;
     color: @basic_grey;
     height: 100%;
