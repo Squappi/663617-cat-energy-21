@@ -1,3 +1,8 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
 .site-list__item {
   font-size: 20px;
@@ -34,6 +39,8 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 440px;
   }
 
@@ -64,7 +71,6 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    display: flex;
     width: 478px;
   }
 

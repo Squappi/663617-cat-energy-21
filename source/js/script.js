@@ -23,7 +23,7 @@ closerNavBar.addEventListener("click", function(evt) {
 
 if (!mediaQuery.matches) {
     document.addEventListener("DOMContentLoaded", function(evt) {
-        closerNavBar.classList.remove("main-navigation__toggle--opened");
+        closerNavBar.classList.remove("visually-hidden");
         closerNavBar.classList.add("main-navigation__toggle--closed");
         navBar.classList.add("visually-hidden");
     });

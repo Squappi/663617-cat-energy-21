@@ -186,12 +186,12 @@
 }
 
 .form__input {
-  &--text,
-  &--email,
-  &--mobile,
-  &--textarea,
-  &--age,
-  &--weight {
+  &--text::placeholder,
+  &--email::placeholder,
+  &--mobile::placeholder,
+  &--textarea::placeholder,
+  &--age::placeholder,
+  &--weight::placeholder {
     color: @special_dark-grey;
     text-transform: uppercase;
   }
@@ -391,7 +391,7 @@
 }
 
 .form__text {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", "Calibri", sans-serif;
   line-height: @line-height - 2px;
   color: @basic_black;
   text-align: center;

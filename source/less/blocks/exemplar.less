@@ -22,7 +22,7 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 21px 0 20px;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", "Calibri", sans-serif;
   margin-top: 32px;
   margin-bottom: 15px;
 }
@@ -56,7 +56,7 @@
 
 .exemplar__text {
   width: 77px;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", "Calibri", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -169,8 +169,19 @@
 
 @media (min-width: @desktop-width) {
   .exemplar {
-    background: linear-gradient(@basic_white 23%, @basic_grey-2 23%);
+    position: relative;
     margin-top: 16px;
+    background: none;
+  }
+
+  .exemplar::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 462px;
+    background: linear-gradient(to right, @basic_grey 72.5%, @basic_grey-2 72.5%);
+    top: 137px;
+    z-index: -1;
   }
 
   .exemplar__wrapper {
@@ -210,6 +221,6 @@
   }
 
   .exemplar__text {
-    background-color: @basic_grey-2;
+    background-color: @basic_grey;
   }
 }

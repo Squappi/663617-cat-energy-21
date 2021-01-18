@@ -22,6 +22,22 @@ const styles = () => {
         .pipe(sourcemap.init())
         .pipe(less())
         .pipe(postcss([
+            autoprefixer()
+        ]))
+        .pipe(rename("style.css"))
+        .pipe(sourcemap.write("."))
+        .pipe(gulp.dest("build/css"))
+        .pipe(sync.stream());
+}
+
+exports.styles = styles;
+
+const stylesmin = () => {
+    return gulp.src("source/less/style.less")
+        .pipe(plumber())
+        .pipe(sourcemap.init())
+        .pipe(less())
+        .pipe(postcss([
             autoprefixer(),
             csso()
         ]))
@@ -31,7 +47,7 @@ const styles = () => {
         .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.stylesmin = stylesmin;
 
 // HTML
 
@@ -137,6 +153,7 @@ const reload = done => {
 
 const watcher = () => {
     gulp.watch("source/less/**/*.less", gulp.series(styles));
+    gulp.watch("source/less/**/*.less", gulp.series(stylesmin));
     gulp.watch("source/js/script.js", gulp.series(scripts));
     gulp.watch("source/*.html", gulp.series(html, reload));
 }
@@ -147,6 +164,7 @@ const build = gulp.series(
     clean,
     gulp.parallel(
         styles,
+        stylesmin,
         html,
         scripts,
         sprite,
@@ -163,6 +181,7 @@ exports.default = gulp.series(
     clean,
     gulp.parallel(
         styles,
+        stylesmin,
         html,
         scripts,
         sprite,
