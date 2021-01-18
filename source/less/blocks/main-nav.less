@@ -3,6 +3,11 @@
   position: relative;
 }
 
+.main-navigation__button-hidden,
+.main-navigation__hidden {
+  display: none;
+}
+
 .main-navigation__toggle {
   position: absolute;
   top: -43px;
@@ -62,6 +67,10 @@
 @media (min-width: @tablet-width) {
   .main-navigation__toggle {
     display: none;
+  }
+
+  .main-navigation__hidden {
+    display: block;
   }
 }
 

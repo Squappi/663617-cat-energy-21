@@ -7,25 +7,25 @@ const textArea = document.querySelector(".form__input--textarea");
 const button = document.querySelector(".form__button");
 const closerNavBar = document.querySelector(".main-navigation__toggle");
 const navBar = document.querySelector(".main-navigation__wrapper");
-const mediaQuery = window.matchMedia('(min-width: 325px)')
+const mediaQuery = window.matchMedia('(min-width: 767px)')
 
 closerNavBar.addEventListener("click", function(evt) {
     if (closerNavBar.classList.contains("main-navigation__toggle--closed")) {
         closerNavBar.classList.add("main-navigation__toggle--opened");
         closerNavBar.classList.remove("main-navigation__toggle--closed");
-        navBar.classList.remove("visually-hidden");
+        navBar.classList.remove("main-navigation__hidden");
     } else {
         closerNavBar.classList.remove("main-navigation__toggle--opened");
         closerNavBar.classList.add("main-navigation__toggle--closed");
-        navBar.classList.add("visually-hidden");
+        navBar.classList.add("main-navigation__hidden");
     }
 });
 
 if (!mediaQuery.matches) {
     document.addEventListener("DOMContentLoaded", function(evt) {
-        closerNavBar.classList.remove("visually-hidden");
+        closerNavBar.classList.remove("main-navigation__button-hidden");
         closerNavBar.classList.add("main-navigation__toggle--closed");
-        navBar.classList.add("visually-hidden");
+        navBar.classList.add("main-navigation__hidden");
     });
 }
 
